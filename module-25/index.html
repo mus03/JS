@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>Comments Sections</h1>
+      <div id="main-container">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+          voluptatum libero molestias, nam corrupti qui maxime, dignissimos
+          possimus, distinctio minima vero. Nemo quos voluptatem omnis,
+          dignissimos quam numquam odio debitis?
+        </p>
+        <p>
+          Distinctio recusandae neque incidunt quod soluta dolorem et dolor
+          nulla iure nihil odit non quasi, accusantium adipisci minus
+          consequatur libero, nostrum possimus doloribus, harum dolore. Vero,
+          ipsum officiis? Nemo, eius.
+        </p>
+        <p>
+          Distinctio tempora inventore repellat nesciunt obcaecati, velit natus
+          accusantium minus maxime, exercitationem, voluptas eos sint iure
+          consectetur mollitia voluptatum dolore impedit voluptate similique
+          aliquam tempore maiores corporis perspiciatis. Doloremque, molestias!
+        </p>
+      </div>
+      <div>
+        <textarea name="" id="comment-box" cols="50" rows="10"></textarea>
+        <br />
+        <button id="btn-sub">submit</button>
+      </div>
+    </main>
+    <script>
+      const btnSub = document
+        .getElementById("btn-sub")
+        .addEventListener("click", function () {
+          const commentBox = document.getElementById("comment-box");
+          const newComment = commentBox.value;
+          const commentContainer = document.getElementById("main-container");
+          const p = document.createElement("p");
+          p.innerText = newComment;
+          commentContainer.appendChild(p);
+          commentBox.value = "";
+        });
+    </script>
+  </body>
+</html>
